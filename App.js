@@ -1,20 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { View, Text, Button, StatusBar } from 'react-native';
+import Form from './components/Form';
+console.log(StatusBar.currentHeight);
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+    <View style={{flex:1}}>
+      <Form />
     </View>
+    // <View style={{ flex: 1, marginTop: StatusBar.currentHeight }}>
+    //   <View style={{ backgroundColor: 'white', flex: 0.5 }}>
+    //     <Text style={{ fontSize: 20 }}>Hello</Text>
+    //   </View>
+    //   <View
+    //     style={{
+    //       backgroundColor: 'blue',
+    //       flex: 0.5,
+    //       justifyContent: 'center',
+    //       alignItems: 'center',
+    //     }}
+    //   >
+    //     <Text style={{ fontSize: 20 }}>Hello from native</Text>
+    //     <Button
+    //       title="Press Here"
+    //       onPress={() => console.log('button pressed')}
+    //     />
+    //   </View>
+    // </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
