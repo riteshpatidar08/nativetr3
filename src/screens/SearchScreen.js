@@ -5,10 +5,13 @@ function SearchScreen() {
   return (
     <View>
         <Text>
-            Search Screen
+         Search Screen
         </Text>
     </View>
   )
 }
 
 export default SearchScreen
+
+//npm install @react-navigation/bottom-tabs
+//npm install @react-navigation/native
