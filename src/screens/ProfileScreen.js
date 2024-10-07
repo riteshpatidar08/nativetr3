@@ -1,47 +1,44 @@
-import React from 'react'
-import { Text, View , FlatList , StyleSheet } from 'react-native'
+import React from 'react';
+import { Text, View, FlatList, StyleSheet } from 'react-native';
 import Icons from 'react-native-vector-icons/Ionicons';
- const DATA = [
+const DATA = [
   {
     id: '1',
     title: 'First Item',
-    icon : 'person'
+    icon: 'person',
   },
   {
     id: '2',
     title: 'Second Item',
-    icon : 'person'
+    icon: 'person',
   },
   {
     id: '3',
     title: 'Third Item',
-    icon : 'person'
+    icon: 'person',
   },
 ];
-const Item = ({title ,icon}) => (
+const Item = ({ title, icon }) => (
   <View style={styles.item}>
     <Text style={styles.title}>{title}</Text>
-  <Icons name={icon} size={30}  />
+    <Icons name={icon} size={30} />
   </View>
 );
 
 const ProfileScreen = () => {
   return (
-   
-      <FlatList
-        data={DATA}
-        renderItem={({item}) => <Item title={item.title} icon={item.icon} />}
-        keyExtractor={item => item.id}
-      />
-   
+    <FlatList
+      data={DATA}
+      renderItem={({ item }) => <Item title={item.title} icon={item.icon} />}
+      keyExtractor={(item) => item.id}
+    />
   );
 };
 
 const styles = StyleSheet.create({
- 
   item: {
-    flexDirection : 'row',
-    justifyContent : "center",
+    flexDirection: 'row',
+    justifyContent: 'center',
     backgroundColor: '#E1A551FF',
     padding: 5,
     marginVertical: 10,
@@ -49,7 +46,7 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 32,
-    margin : 30
+    margin: 30,
   },
 });
 
